@@ -1,0 +1,24 @@
+For all parts, the server component is the receiver of the file and must be running before starting the corresponding client component.
+
+All executables use stdin and stdout: the server will output to stdout the bytes sent by the client, which reads from stdin.
+
+Build all executables with `make' from the top level directory.
+
+Examples:
+
+    ./part1_server > outfile &
+    cat infile | ./part1_client
+
+(outfile now contains the same content as infile)
+
+    ./part2_server > outfile &
+    cat infile | ./part2_client
+
+(outfile now contains the same content as infile)
+
+    ./part3_server > outfile &
+    cat infile | ./part3_client
+
+(outfile now contains the same content as infile)
+
+Per the assignment, the part1_* executables are TCP-based, and the part2_* executables are UDP-based. The part3_* exectuables are very similar to the part1_* ones, however part3_client is a Python script.
